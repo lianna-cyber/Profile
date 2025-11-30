@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Wireframe - Minimal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: white;
+            padding: 20px;
+        }
+
+        .wireframe {
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+
+        .section {
+            border-bottom: 2px solid black;
+            padding: 40px;
+            min-height: 200px;
+            position: relative;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-weight: bold;
+            font-size: 12px;
+            background: white;
+            padding: 2px 5px;
+        }
+
+        .box {
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            min-height: 80px;
+            align-items: center;
+        }
+
+        .navbar .box {
+            height: 60px;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            min-height: 300px;
+        }
+
+        .hero .box {
+            height: 80px;
+        }
+
+        .hero .box:nth-child(2) {
+            height: 50px;
+        }
+
+        .hero .box:nth-child(3) {
+            height: 40px;
+        }
+
+        .hero .box:nth-child(4) {
+            height: 50px;
+            width: 200px;
+        }
+
+        /* About */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .about .box {
+            height: 300px;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .about-text .box {
+            height: 60px;
+        }
+
+        .about-text .box:nth-child(2) {
+            height: 80px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .skills-grid .box {
+            height: 120px;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .projects-grid .box {
+            height: 250px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-grid .box {
+            height: 300px;
+        }
+
+        /* Footer */
+        .footer .box {
+            height: 80px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                grid-template-columns: 1fr;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navbar {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe">
+        <!-- Navigation -->
+        <div class="section navbar" style="border-bottom: 2px solid black;">
+            <span class="label">Navigation</span>
+            <div class="box" style="width: 100px; height: 50px;">X</div>
+            <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; width: 100%;">
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+            </div>
+            <div class="box" style="width: 60px; height: 50px;">X</div>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="section hero">
+            <span class="label">Hero Section</span>
+            <div class="box">X</div>
+            <div class="box">X</div>
+            <div class="box">X</div>
+            <div class="box">X</div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section about">
+            <span class="label">About Section</span>
+            <div class="box">X</div>
+            <div class="about-text">
+                <div class="box">X</div>
+                <div style="line-height: 1.6; font-size: 14px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <span class="label">Skills Section</span>
+            <div style="margin-bottom: 20px;">
+                <div class="box" style="height: 50px; margin-bottom: 20px;">X</div>
+            </div>
+            <div class="skills-grid">
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <span class="label">Projects Section</span>
+            <div style="margin-bottom: 20px;">
+                <div class="box" style="height: 50px;">X</div>
+            </div>
+            <div class="projects-grid">
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+                <div class="box">X</div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section">
+            <span class="label">Contact Section</span>
+            <div class="contact-grid">
+                <div class="box">X</div>
+                <div class="box">X</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="section footer">
+            <span class="label">Footer</span>
+            <div class="box">X</div>
+        </div>
+    </div>
+</body>
+</html>
